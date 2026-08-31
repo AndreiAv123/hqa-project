@@ -36,7 +36,7 @@ STAKE = "10.00"
 @pytest.mark.e2e
 @pytest.mark.nondestructive  # dedicated test app - a placed bet here is expected and safe
 @pytest.mark.parametrize("selection", ["HOME"])
-def test_place_single_bet_updates_balance_and_shows_receipt(driver,reset_balance, selection):
+def test_place_single_bet_updates_balance_and_shows_receipt(driver, reset_balance, selection):
     page = BetSlipPage(driver)
 
     # Contract check on the first match card: must be UPCOMING, not PAST/live.
@@ -101,4 +101,4 @@ def test_place_single_bet_updates_balance_and_shows_receipt(driver,reset_balance
     assert_close(
         page.get_balance(), starting_balance - float(STAKE),
         "Balance after bet vs starting balance minus stake",
-                            )
+    )

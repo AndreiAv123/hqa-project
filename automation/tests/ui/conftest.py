@@ -40,6 +40,7 @@ def reset_balance(api_client):
     resp.raise_for_status()
     return resp.json()
 
+
 @pytest.fixture
 def driver(user_id, base_url):
     """

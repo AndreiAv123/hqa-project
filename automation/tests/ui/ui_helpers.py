@@ -12,7 +12,6 @@ WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
 
 
 def parse_kickoff_label(label: str, today: date):
-
     label = label.strip()
 
     # Shape 1: "Sat, Sep 19" - always this year, no rollover guessing.

@@ -46,6 +46,7 @@ def get_balance(api_client):
     resp.raise_for_status()
     return resp.json()
 
+
 @pytest.fixture
 def first_match(api_client):
     """

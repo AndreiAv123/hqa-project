@@ -10,8 +10,6 @@ import random
 import pytest
 
 
-
-
 def print_curl(method, url, headers, body=None):
     """
     Print a request as an equivalent curl command. pytest only shows
@@ -38,6 +36,7 @@ def place_bet(api_client, base_url, match, stake, selection=None):
     body = {"matchId": match_id, "selection": selection, "stake": stake}
     print_curl("POST", f"{base_url}/api/place-bet", api_client.headers, body)
     return api_client.api_post("/api/place-bet", json=body)
+
 
 def assert_bet_response_matches(actual: dict, *, match_id, selection, stake, odds, balance_after_bet, currency):
     """
