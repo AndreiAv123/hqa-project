@@ -52,7 +52,3 @@ automation/
   requirements.txt
   pytest.ini
 ```
-
-No extra tooling (Poetry/Allure/etc.) was used beyond the required stack, to keep the submission
-focused per the assignment's guidance that "a focused submission... will score higher than a
-large one."
